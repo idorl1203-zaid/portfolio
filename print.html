@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>Ido Rafael — Portfolio (PDF)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  :root { --text:#1d1d1f; --text-2:#6e6e73; --text-3:#86868b; --line:rgba(0,0,0,.09); --bg-alt:#f5f5f7; --link:#0066cc;
+          --grad: linear-gradient(90deg,#0071e3 0%,#8b5cf6 50%,#ec4899 100%); }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #fff; color: var(--text); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: "Inter", "Heebo", -apple-system, sans-serif; font-size: 11pt; line-height: 1.45; letter-spacing: -.005em; }
+  html[lang="he"] body { font-family: "Heebo", "Inter", -apple-system, sans-serif; }
+  h1, h2, h3 { margin: 0; letter-spacing: -.025em; line-height: 1.08; }
+  p { margin: 0; }
+  a { color: var(--link); text-decoration: none; }
+  .grad { color: #5b4ff5; }
+
+  .page { width: 210mm; height: 297mm; padding: 16mm 16mm 14mm; position: relative; overflow: hidden; page-break-after: always; display: flex; flex-direction: column; }
+  .page:last-child { page-break-after: auto; }
+  .foot { position: absolute; bottom: 8mm; inset-inline: 16mm; display: flex; justify-content: space-between; font-size: 8pt; color: var(--text-3); }
+
+  /* cover */
+  .cover { justify-content: center; text-align: center; background: radial-gradient(120% 60% at 50% 0%, #eef4ff 0%, #fff 60%); }
+  .cover .eyebrow { color: var(--text-2); font-weight: 600; font-size: 12pt; }
+  .cover h1 { font-size: 54pt; font-weight: 800; margin-top: 6mm; }
+  .cover .lead { color: var(--text-2); font-size: 15pt; max-width: 140mm; margin: 8mm auto 0; font-weight: 500; }
+  .cover .name { font-size: 20pt; font-weight: 700; margin-top: 18mm; }
+  .cover .contact { margin-top: 3mm; font-size: 11pt; color: var(--text-2); }
+  .stats { display: flex; justify-content: center; gap: 16mm; margin-top: 16mm; }
+  .stats b { display: block; font-size: 30pt; letter-spacing: -.03em; }
+  .stats span { color: var(--text-2); font-size: 9pt; }
+  .toc { margin: 16mm auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 3mm 10mm; text-align: start; max-width: 150mm; }
+  .toc div { display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding: 2mm 0; font-size: 10pt; }
+  .toc i { font-style: normal; color: var(--text-3); }
+
+  /* project page */
+  .head { display: flex; align-items: center; gap: 5mm; }
+  .head img.icon { width: 16mm; height: 16mm; border-radius: 3.6mm; }
+  .pill { display: inline-flex; align-items: center; gap: 1.5mm; font-size: 8pt; font-weight: 600; color: var(--text-2);
+          padding: 1mm 3mm; border-radius: 99px; border: 1px solid var(--line); margin-bottom: 2mm; }
+  .pill::before { content:""; width: 2mm; height: 2mm; border-radius: 50%; background: var(--dot,#34c759); }
+  .pill[data-s="dev"] { --dot:#ff9f0a } .pill[data-s="local"] { --dot:#8e8e93 } .pill[data-s="cloud"] { --dot:#0a84ff }
+  .num { color: var(--text-3); font-size: 9pt; font-weight: 600; margin-inline-start: auto; align-self: flex-start; }
+  h2 { font-size: 30pt; font-weight: 800; }
+  .tagline { font-size: 14pt; font-weight: 500; color: var(--text-2); margin-top: 1.5mm; }
+  .summary { margin-top: 5mm; font-size: 11.5pt; }
+  .shots { margin-top: 6mm; display: flex; gap: 4mm; justify-content: center; align-items: center; background: var(--bg-alt);
+           border-radius: 5mm; padding: 6mm; height: 128mm; flex: none; overflow: hidden; }
+  .shots img { border-radius: 2.5mm; border: 1px solid var(--line); object-fit: cover; object-position: top; }
+  .shots.phone img { height: 116mm; width: auto; aspect-ratio: 9 / 19.5; border-radius: 6mm; border: 1.6mm solid #1d1d1f; }
+  .shots.one img { width: 100%; height: 100%; object-fit: contain; border: 0; background: transparent; }
+  .shots.two { flex-direction: column; }
+  .shots.two img { width: 100%; height: calc(50% - 2mm); }
+  .cols { display: grid; grid-template-columns: 1.55fr 1fr; gap: 8mm; margin-top: 7mm; }
+  h4 { margin: 0 0 2.5mm; font-size: 8pt; text-transform: uppercase; letter-spacing: .08em; color: var(--text-3); }
+  ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 2mm; }
+  li { position: relative; padding-inline-start: 4.5mm; font-size: 10pt; }
+  li::before { content:""; position: absolute; inset-inline-start: 0; top: .55em; width: 2mm; height: 2mm; border-radius: 50%; background: var(--accent); }
+  .tags { display: flex; flex-wrap: wrap; gap: 1.5mm; }
+  .tag { font-size: 8.5pt; color: var(--text-2); background: var(--bg-alt); padding: .8mm 2.6mm; border-radius: 99px; }
+  .links { margin-top: 5mm; display: grid; gap: 1.5mm; font-size: 9.5pt; }
+  .links div { display: flex; gap: 2mm; }
+  .links b { color: var(--text-3); font-weight: 600; min-width: 22mm; }
+  .links a { direction: ltr; unicode-bidi: embed; word-break: break-all; }
+  .lock { font-size: 9pt; color: var(--text-3); margin-top: 2mm; }
+</style>
+</head>
+<body>
+<div id="doc"></div>
+<script src="data.js"></script>
+<script>
+(() => {
+  const { I18N, PROJECTS } = window;
+  const lang = new URLSearchParams(location.search).get("lang") === "en" ? "en" : "he";
+  const t = I18N[lang];
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+  const name = t.brand;
+  const site = "https://ido-portfolio-one.vercel.app";
+  const L = lang === "he"
+    ? { title: 'מרעיון.<br><span class="grad">ועד החנות.</span>', contents: "תוכן", links: "קישורים", code: "קוד" }
+    : { title: 'From idea.<br><span class="grad">To the App Store.</span>', contents: "Contents", links: "Links", code: "Code" };
+  const total = PROJECTS.length + 1;
+  const foot = (n) => `<div class="foot"><span>${esc(name)} · ${esc(lang === "he" ? "פורטפוליו" : "Portfolio")}</span><span>${n} / ${total}</span></div>`;
+  const label = (l) => l.type === "showcase" ? t.showcase : t[l.type];
+
+  let html = `
+  <section class="page cover">
+    <p class="eyebrow">${esc(t.heroEyebrow)}</p>
+    <h1>${L.title}</h1>
+    <p class="lead">${esc(t.heroLead)}</p>
+    <div class="stats">
+      <div><b>${PROJECTS.length}</b><span>${esc(t.stat1)}</span></div>
+      <div><b>2</b><span>${esc(t.stat2)}</span></div>
+      <div><b>3</b><span>${esc(t.stat3)}</span></div>
+    </div>
+    <div class="toc">${PROJECTS.map((p, i) => `<div><span>${esc(p[lang].name)}</span><i>${i + 2}</i></div>`).join("")}</div>
+    <p class="name">${esc(name)}</p>
+    <p class="contact"><a href="mailto:idorl1203@gmail.com">idorl1203@gmail.com</a> · <a href="https://github.com/idorl1203-zaid">github.com/idorl1203-zaid</a> · <a href="${site}">${site.replace("https://", "")}</a></p>
+    ${foot(1)}
+  </section>`;
+
+  PROJECTS.forEach((p, i) => {
+    const c = p[lang];
+    const imgs = p.phone ? p.images.slice(0, 3) : p.images.slice(0, 2);
+    const cls = p.phone ? "phone" : imgs.length > 1 ? "two" : "one";
+    const links = p.links.map((l) => `<div><b>${esc(label(l))}</b><a href="${esc(l.url)}">${esc(l.url.replace("https://", ""))}</a></div>`).join("");
+    html += `
+    <section class="page" style="--accent:${p.accent}">
+      <div class="head">
+        ${p.icon ? `<img class="icon" src="${p.icon}" alt="">` : ""}
+        <div>
+          <div class="pill" data-s="${p.status}">${esc(t.status[p.status])}</div>
+          <h2>${esc(c.name)}</h2>
+        </div>
+        <span class="num">${String(i + 1).padStart(2, "0")}</span>
+      </div>
+      <p class="tagline">${esc(c.tagline)}</p>
+      <p class="summary">${esc(c.summary)}</p>
+      <div class="shots ${cls}">${imgs.map((n) => `<img src="assets/img/${n}.webp" alt="">`).join("")}</div>
+      <div class="cols">
+        <div><h4>${esc(t.highlights)}</h4><ul>${c.highlights.map((h) => `<li>${esc(h)}</li>`).join("")}</ul></div>
+        <div>
+          <h4>${esc(t.stackLabel)}</h4>
+          <div class="tags">${p.stack.map((s) => `<span class="tag">${esc(s)}</span>`).join("")}</div>
+          <div class="links">${links}</div>
+          ${p.code === "private" ? `<p class="lock">🔒 ${esc(t.private)}</p>` : ""}
+        </div>
+      </div>
+      ${foot(i + 2)}
+    </section>`;
+  });
+  document.getElementById("doc").innerHTML = html;
+})();
+</script>
+</body>
+</html>
