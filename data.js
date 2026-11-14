@@ -1,7 +1,7 @@
 // Portfolio content — every user-facing string has he + en.
 window.I18N = {
   he: {
-    brand: "עידו",
+    brand: "עידו רפאל",
     navWork: "עבודות", navAbout: "אודות", navContact: "צור קשר",
     heroEyebrow: "פורטפוליו · 2026",
     heroTitle: 'מרעיון.<br><span class="grad">ועד החנות.</span>',
@@ -16,14 +16,14 @@ window.I18N = {
     contactTitle: 'יש לך רעיון?<br><span class="grad">בוא נבנה אותו.</span>',
     contactLead: "פתוח לפרויקטים, שיתופי פעולה ותפקידים.",
     contactMail: "שליחת מייל",
-    footer: "עוצב ונבנה על ידי עידו",
+    footer: "עוצב ונבנה על ידי עידו רפאל",
     all: "הכול", learnMore: "פרטים נוספים", live: "חי", private: "קוד פרטי — זמין לפי בקשה",
     showcase: "ריפו תצוגה", highlights: "מה בפנים", stackLabel: "טכנולוגיות",
     visit: "לאתר", github: "קוד ב-GitHub", appStore: "App Store", googlePlay: "Google Play",
     status: { live: "חי", store: "בחנויות", local: "רץ מקומית", cloud: "רץ בענן", dev: "בפיתוח" },
   },
   en: {
-    brand: "Ido",
+    brand: "Ido Rafael",
     navWork: "Work", navAbout: "About", navContact: "Contact",
     heroEyebrow: "Portfolio · 2026",
     heroTitle: 'From idea.<br><span class="grad">To the App Store.</span>',
@@ -38,7 +38,7 @@ window.I18N = {
     contactTitle: 'Got an idea?<br><span class="grad">Let’s build it.</span>',
     contactLead: "Open to projects, collaborations and roles.",
     contactMail: "Email me",
-    footer: "Designed and built by Ido",
+    footer: "Designed and built by Ido Rafael",
     all: "All", learnMore: "Learn more", live: "Live", private: "Private code — available on request",
     showcase: "Showcase repo", highlights: "Highlights", stackLabel: "Built with",
     visit: "Visit site", github: "Code on GitHub", appStore: "App Store", googlePlay: "Google Play",
@@ -167,7 +167,7 @@ window.PROJECTS = [
         "חמישה סבבי מסחר מתוזמנים ביום, שרצים בענן כ-Claude Code Routines",
         "אסטרטגיות מוגדרות: ORB, VWAP, חוזק יחסי, pullback — עם מעקב ביצועים לכל סטאפ",
         "מצב נשמר ב-git בסוף כל סבב; התראות טלגרם דרך GitHub Actions",
-        "דשבורד חי: עקומת הון, אחוז הצלחה ולוח הזמנים של היום",
+        "דשבורד חי: רשימת מעקב עם תזה לכל מניה, ונימוק מלא מאחורי כל עסקה",
       ],
     },
     en: {
@@ -178,7 +178,7 @@ window.PROJECTS = [
         "Five scheduled trading sessions a day, running in the cloud as Claude Code Routines",
         "Defined strategies — ORB, VWAP, relative strength, pullback — with per-setup stats",
         "State committed to git after every session; Telegram alerts via GitHub Actions",
-        "Live dashboard: equity curve, win rate and the day’s schedule",
+        "Live dashboard: a watchlist with a thesis per ticker, and the full reasoning behind every trade",
       ],
     },
   },

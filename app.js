@@ -82,7 +82,7 @@
     document.querySelectorAll("[data-i18n]").forEach((el) => { el.textContent = t(el.dataset.i18n); });
     document.querySelectorAll("[data-i18n-html]").forEach((el) => { el.innerHTML = t(el.dataset.i18nHtml); });
     document.querySelectorAll(".seg button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
-    document.title = lang === "he" ? "עידו — פורטפוליו" : "Ido — Portfolio";
+    document.title = lang === "he" ? "עידו רפאל — פורטפוליו" : "Ido Rafael — Portfolio";
   }
 
   function render() {
