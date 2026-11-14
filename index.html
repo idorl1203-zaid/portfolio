@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ido — Portfolio</title>
+<meta name="description" content="Products, apps and AI agents built by Ido — InvestIQ, Co-Drive, StockAI, Claude Trader and more.">
+<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Ido — Portfolio">
+<meta property="og:description" content="Products, apps and AI agents — from idea to the App Store.">
+<meta property="og:image" content="assets/img/stock-1.webp">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand" data-i18n="brand">עידו</a>
+    <nav class="nav-links">
+      <a href="#work" data-i18n="navWork">עבודות</a>
+      <a href="#about" data-i18n="navAbout">אודות</a>
+      <a href="#contact" data-i18n="navContact">צור קשר</a>
+    </nav>
+    <div class="seg" role="group" aria-label="Language">
+      <button data-lang="he" aria-pressed="true">עב</button>
+      <button data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <p class="eyebrow reveal" data-i18n="heroEyebrow">פורטפוליו · 2026</p>
+    <h1 class="reveal" data-i18n-html="heroTitle">מרעיון.<br><span class="grad">ועד החנות.</span></h1>
+    <p class="lead reveal" data-i18n="heroLead">אפליקציות, מוצרי ווב וסוכני AI אוטונומיים — מתוכננים, מעוצבים ונבנים מקצה לקצה.</p>
+    <div class="hero-cta reveal">
+      <a class="btn btn-primary" href="#work" data-i18n="heroCta1">לעבודות</a>
+      <a class="btn-link" href="#contact"><span data-i18n="heroCta2">בואו נדבר</span> <span class="chev">›</span></a>
+    </div>
+    <dl class="stats reveal">
+      <div><dt>8</dt><dd data-i18n="stat1">פרויקטים</dd></div>
+      <div><dt>2</dt><dd data-i18n="stat2">אפליקציות חיות בחנויות</dd></div>
+      <div><dt>3</dt><dd data-i18n="stat3">פלטפורמות: ווב · iOS · Android</dd></div>
+    </dl>
+  </section>
+
+  <!-- Featured: shipped products -->
+  <section class="featured" id="work">
+    <div id="featured"></div>
+  </section>
+
+  <!-- All work -->
+  <section class="work">
+    <div class="section-head reveal">
+      <h2 data-i18n="workTitle">עוד עבודות.</h2>
+      <p data-i18n="workSub">סוכנים אוטונומיים, כלי מסחר ומערכות ניהול.</p>
+    </div>
+    <div class="filters reveal" id="filters" role="tablist"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-inner reveal">
+      <h2 data-i18n="aboutTitle">איך אני עובד.</h2>
+      <div class="pillars">
+        <div class="pillar">
+          <div class="pillar-ico" aria-hidden="true">◎</div>
+          <h3 data-i18n="p1t">מוצר קודם</h3>
+          <p data-i18n="p1d">מתחיל מהבעיה של המשתמש, לא מהטכנולוגיה. כל פרויקט כאן נולד מצורך אמיתי.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-ico" aria-hidden="true">✦</div>
+          <h3 data-i18n="p2t">AI בליבה</h3>
+          <p data-i18n="p2d">Claude ו-Gemini כחלק מהמוצר — ניתוח, החלטה וביצוע — לא רק כצ׳אט בצד.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-ico" aria-hidden="true">⌘</div>
+          <h3 data-i18n="p3t">עד הסוף</h3>
+          <p data-i18n="p3d">עיצוב, פיתוח, תשתית, הגשה ל-App Store ול-Google Play — והתחזוקה שאחרי.</p>
+        </div>
+      </div>
+      <div class="stack-cloud" id="stack"></div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="reveal">
+      <h2 data-i18n-html="contactTitle">יש לך רעיון?<br><span class="grad">בוא נבנה אותו.</span></h2>
+      <p class="lead" data-i18n="contactLead">פתוח לפרויקטים, שיתופי פעולה ותפקידים.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="mailto:idorl1203@gmail.com" data-i18n="contactMail">שליחת מייל</a>
+        <a class="btn-link" href="https://github.com/idorl1203-zaid" target="_blank" rel="noopener">GitHub <span class="chev">›</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <p><span data-i18n="footer">עוצב ונבנה על ידי עידו</span> · © <span id="year"></span></p>
+</footer>
+
+<!-- Project detail sheet -->
+<div class="sheet" id="sheet" aria-hidden="true">
+  <div class="sheet-backdrop" data-close></div>
+  <article class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+    <button class="sheet-close" data-close aria-label="Close">✕</button>
+    <div id="sheet-body"></div>
+  </article>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
