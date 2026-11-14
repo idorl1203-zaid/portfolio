@@ -152,7 +152,7 @@ html[dir="rtl"] .btn-link:hover .chev { transform: scaleX(-1) translateX(3px); }
 .status-pill[data-s="cloud"] { --dot: #0a84ff; }
 
 /* ───────── Work grid ───────── */
-.work { max-width: 1080px; margin: 0 auto; padding: 120px 22px 40px; }
+.work { max-width: 1180px; margin: 0 auto; padding: 120px 22px 40px; }
 .section-head h2 { font-size: clamp(40px, 6vw, 56px); }
 .section-head p { color: var(--text-2); font-size: clamp(19px, 2.2vw, 24px); margin-top: 10px; font-weight: 500; }
 .filters { display: flex; gap: 8px; flex-wrap: wrap; margin: 36px 0 28px; }
@@ -163,7 +163,7 @@ html[dir="rtl"] .btn-link:hover .chev { transform: scaleX(-1) translateX(3px); }
 }
 .chip:hover { border-color: var(--text-3); }
 .chip[aria-selected="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
-.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .card {
   background: var(--card); border-radius: var(--radius); overflow: hidden; cursor: pointer;
   box-shadow: var(--shadow); text-align: start; border: 0; padding: 0; font: inherit; color: inherit;
@@ -172,11 +172,11 @@ html[dir="rtl"] .btn-link:hover .chev { transform: scaleX(-1) translateX(3px); }
 }
 .card:hover { transform: translateY(-4px) scale(1.01); box-shadow: var(--shadow-hover); }
 .card.hidden { display: none; }
-.card-body { padding: 28px 30px 22px; }
-.card h3 { font-size: 28px; }
+.card-body { padding: 26px 24px 20px; }
+.card h3 { font-size: 24px; }
 .card .tagline { color: var(--text-2); font-size: 17px; margin-top: 6px; }
 .card-media {
-  margin-top: auto; padding: 0 30px; position: relative;
+  margin-top: auto; padding: 0 24px; position: relative;
   background: linear-gradient(180deg, transparent 30%, color-mix(in srgb, var(--accent) 18%, transparent) 100%);
 }
 .card-media img {
@@ -270,8 +270,11 @@ html[dir="rtl"] .sheet-close { margin: 16px 0 0 16px; }
 }
 
 /* ───────── Responsive ───────── */
+@media (max-width: 980px) {
+  .grid { grid-template-columns: 1fr; max-width: 560px; margin-inline: auto; }
+}
 @media (max-width: 860px) {
-  .grid, .pillars { grid-template-columns: 1fr; }
+  .pillars { grid-template-columns: 1fr; }
   .sheet-cols { grid-template-columns: 1fr; gap: 28px; }
 }
 @media (max-width: 600px) {
