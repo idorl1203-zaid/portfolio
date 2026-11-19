@@ -23,7 +23,8 @@
   function renderFeatured() {
     $("#featured").innerHTML = PROJECTS.filter((p) => p.featured).map((p) => {
       const c = p[lang];
-      const primary = p.links[0];
+      const stores = p.links.filter((l) => l.type === "appStore" || l.type === "googlePlay");
+      const ctas = stores.length ? stores : p.links.slice(0, 1);
       return `
       <article class="tile reveal" style="--accent:${p.accent}">
         <img class="tile-icon" src="${p.icon}" alt="" width="64" height="64">
@@ -32,7 +33,7 @@
         <p class="tagline">${esc(c.tagline)}</p>
         <p class="summary">${esc(c.summary)}</p>
         <div class="hero-cta">
-          ${primary ? linkBtn(primary, "btn btn-primary") : ""}
+          ${ctas.map((l) => linkBtn(l, "btn btn-primary")).join("")}
           <a class="btn-link" href="#" data-open="${p.id}">${esc(t("learnMore"))} <span class="chev">›</span></a>
         </div>
         <div class="phones">
