@@ -196,13 +196,12 @@ html[dir="rtl"] .btn-link:hover .chev { transform: scaleX(-1) translateX(3px); }
 /* Services */
 .services { max-width: 1180px; margin: 0 auto; padding: 120px 22px 20px; }
 .services .section-head p { max-width: 760px; }
-.plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; align-items: start; }
+.plans { display: grid; grid-template-columns: repeat(2, 1fr); max-width: 820px; margin-inline: auto; gap: 24px; margin-top: 48px; align-items: start; }
 .plan { background: var(--card); border-radius: var(--radius); padding: 34px 30px; box-shadow: var(--shadow); }
 .plan.plan-hi { box-shadow: 0 0 0 2px var(--btn), var(--shadow); }
 .plan h3 { font-size: 26px; }
 .plan-tag { color: var(--text-2); margin-top: 6px; }
-.plan-price { font-size: 30px; font-weight: 700; margin-top: 22px; }
-.plan-time { color: var(--text-3); font-size: 15px; margin-top: 2px; }
+.plan-time { color: var(--text-3); font-size: 15px; margin-top: 14px; }
 .plan .hl { margin-top: 20px; }
 .plan-proof { margin-top: 20px; font-size: 15px; color: var(--text-2); }
 .plan-proof a { color: var(--link); text-decoration: none; }
