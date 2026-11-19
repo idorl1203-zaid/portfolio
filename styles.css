@@ -193,6 +193,26 @@ html[dir="rtl"] .btn-link:hover .chev { transform: scaleX(-1) translateX(3px); }
 .lock { font-size: 12px; color: var(--text-3); white-space: nowrap; }
 
 /* ───────── About ───────── */
+/* Services */
+.services { max-width: 1180px; margin: 0 auto; padding: 120px 22px 20px; }
+.services .section-head p { max-width: 760px; }
+.plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; align-items: start; }
+.plan { background: var(--card); border-radius: var(--radius); padding: 34px 30px; box-shadow: var(--shadow); }
+.plan.plan-hi { box-shadow: 0 0 0 2px var(--btn), var(--shadow); }
+.plan h3 { font-size: 26px; }
+.plan-tag { color: var(--text-2); margin-top: 6px; }
+.plan-price { font-size: 30px; font-weight: 700; margin-top: 22px; }
+.plan-time { color: var(--text-3); font-size: 15px; margin-top: 2px; }
+.plan .hl { margin-top: 20px; }
+.plan-proof { margin-top: 20px; font-size: 15px; color: var(--text-2); }
+.plan-proof a { color: var(--link); text-decoration: none; }
+.plan-proof a:hover { text-decoration: underline; }
+.steps { list-style: none; padding: 0; margin: 64px 0 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+.steps h4 { font-size: 19px; margin-top: 12px; }
+.steps p { color: var(--text-2); margin-top: 6px; font-size: 16px; }
+.step-n { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--btn); color: #fff; font-weight: 700; font-size: 16px; }
+.services > .hero-cta { margin-top: 56px; }
+
 .about { background: var(--bg-alt); margin-top: 100px; }
 .about-inner { max-width: 1080px; margin: 0 auto; padding: 110px 22px; }
 .about h2 { font-size: clamp(40px, 6vw, 56px); text-align: center; }
@@ -275,6 +295,8 @@ html[dir="rtl"] .sheet-close { margin: 16px 0 0 16px; }
 }
 @media (max-width: 860px) {
   .pillars { grid-template-columns: 1fr; }
+  .plans { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr 1fr; }
   .sheet-cols { grid-template-columns: 1fr; gap: 28px; }
 }
 @media (max-width: 600px) {
@@ -294,5 +316,7 @@ html[dir="rtl"] .sheet-close { margin: 16px 0 0 16px; }
   .gallery img { height: 46vh; }
   .sheet-cols { padding: 24px 22px 40px; }
   .about-inner { padding: 80px 16px; }
+  .services { padding: 88px 16px 10px; }
+  .steps { grid-template-columns: 1fr; }
   .contact { padding: 100px 16px; }
 }

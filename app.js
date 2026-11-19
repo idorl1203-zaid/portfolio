@@ -72,6 +72,28 @@
     }).join("");
   }
 
+  function renderServices() {
+    const name = (id) => PROJECTS.find((x) => x.id === id)?.[lang].name || id;
+    $("#plans").innerHTML = SERVICES.plans.map((s) => {
+      const c = s[lang];
+      const price = `${esc(t("svcFrom"))}${esc(s.price)}${s.monthly ? (lang === "he" ? " לחודש" : " / month") : ""}`;
+      const proof = s.proof.length
+        ? `<p class="plan-proof">${esc(t("svcProof"))} ${s.proof.map((id) => `<a href="#" data-open="${id}">${esc(name(id))}</a>`).join(" · ")}</p>` : "";
+      return `
+      <article class="plan reveal${s.featured ? " plan-hi" : ""}">
+        <h3>${esc(c.name)}</h3>
+        <p class="plan-tag">${esc(c.tagline)}</p>
+        <p class="plan-price">${price}</p>
+        <p class="plan-time">${esc(c.time)}</p>
+        <ul class="hl">${c.items.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>
+        ${proof}
+      </article>`;
+    }).join("");
+    $("#steps").innerHTML = SERVICES.steps[lang].map(([h, d], i) =>
+      `<li><span class="step-n">${i + 1}</span><h4>${esc(h)}</h4><p>${esc(d)}</p></li>`).join("");
+    $("#call-link").href = "https://mail.google.com/mail/?view=cm&fs=1&to=idorl1203@gmail.com&su=" + encodeURIComponent(t("svcCallSubject"));
+  }
+
   function renderStack() {
     const all = [...new Set(PROJECTS.flatMap((p) => p.stack))];
     $("#stack").innerHTML = all.map((s) => `<span>${esc(s)}</span>`).join("");
@@ -92,6 +114,7 @@
     renderFeatured();
     renderFilters();
     renderGrid();
+    renderServices();
     renderStack();
     observe();
     if (openId) openSheet(openId, true);

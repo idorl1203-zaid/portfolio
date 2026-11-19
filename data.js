@@ -2,7 +2,11 @@
 window.I18N = {
   he: {
     brand: "עידו רפאל",
-    navWork: "עבודות", navAbout: "אודות", navContact: "צור קשר",
+    navWork: "עבודות", navServices: "שירותים", navAbout: "אודות", navContact: "צור קשר",
+    svcTitle: "שירותים לעסקים.",
+    svcSub: "לעסקי שירות שחיים מלידים ומתורים — קליניקות, סטודיואים, מאמנים ונותני שירות. פחות פניות שנופלות בין הכיסאות, פחות וואטסאפ ידני, יותר זמן לעבודה עצמה.",
+    svcCta: "לקביעת שיחת אבחון", svcCallSubject: "שיחת אבחון — ",
+    svcFrom: "החל מ-", svcProof: "ראו בפועל:", svcStepsTitle: "איך זה עובד",
     heroEyebrow: "פורטפוליו · 2026",
     heroTitle: 'מרעיון.<br><span class="grad">ועד החנות.</span>',
     heroLead: "אפליקציות, מוצרי ווב וסוכני AI אוטונומיים — מתוכננים, מעוצבים ונבנים מקצה לקצה.",
@@ -24,7 +28,11 @@ window.I18N = {
   },
   en: {
     brand: "Ido Rafael",
-    navWork: "Work", navAbout: "About", navContact: "Contact",
+    navWork: "Work", navServices: "Services", navAbout: "About", navContact: "Contact",
+    svcTitle: "Services for businesses.",
+    svcSub: "For service businesses that run on leads and appointments — clinics, studios, coaches and service providers. Fewer leads slipping through, less manual WhatsApp, more time for the actual work.",
+    svcCta: "Book a discovery call", svcCallSubject: "Discovery call — ",
+    svcFrom: "From ", svcProof: "See it live:", svcStepsTitle: "How it works",
     heroEyebrow: "Portfolio · 2026",
     heroTitle: 'From idea.<br><span class="grad">To the App Store.</span>',
     heroLead: "Apps, web products and autonomous AI agents — planned, designed and built end to end.",
@@ -43,6 +51,36 @@ window.I18N = {
     showcase: "Showcase repo", highlights: "Highlights", stackLabel: "Built with",
     visit: "Visit site", github: "Code on GitHub", appStore: "App Store", googlePlay: "Google Play",
     status: { live: "Live", store: "In the stores", local: "Runs locally", cloud: "Runs in the cloud", dev: "In development" },
+  },
+};
+
+window.SERVICES = {
+  plans: [
+    {
+      id: "automation", price: "₪3,500", proof: ["crm"],
+      he: { name: "אוטומציה ממוקדת", tagline: "כל פנייה מקבלת מענה תוך דקה.", time: "כשבועיים",
+        items: ["לכידת לידים מהאתר, מגוגל ומהרשתות", "מענה אוטומטי ראשון בוואטסאפ", "כל הלידים במקום אחד, עם סטטוס", "תזכורות מעקב כדי שאף ליד לא יישכח"] },
+      en: { name: "Focused automation", tagline: "Every lead gets an answer within a minute.", time: "About 2 weeks",
+        items: ["Capture leads from your site, Google and social", "Instant first reply on WhatsApp", "All leads in one place, with status", "Follow-up reminders so no lead is forgotten"] },
+    },
+    {
+      id: "system", price: "₪12,000", featured: true, proof: ["pichman", "codrive"],
+      he: { name: "מערכת מותאמת", tagline: "המערכת שהעסק שלך באמת צריך.", time: "4–6 שבועות",
+        items: ["ניהול לקוחות, תורים ומסמכים", "הרשאות לפי תפקיד לכל הצוות", "אפליקציה לאייפון ולאנדרואיד — לפי הצורך", "AI מובנה: סיכומים, ניתוח ומענה"] },
+      en: { name: "Custom system", tagline: "The system your business actually needs.", time: "4–6 weeks",
+        items: ["Clients, appointments and documents", "Role-based access for the whole team", "iOS and Android app — when needed", "Built-in AI: summaries, analysis and replies"] },
+    },
+    {
+      id: "care", price: "₪1,000", monthly: true, proof: [],
+      he: { name: "ליווי חודשי", tagline: "המערכת ממשיכה להשתפר.", time: "חודשי, בלי התחייבות",
+        items: ["תחזוקה ותיקונים", "שיפורים ואוטומציות חדשות", "זמינות ישירה בוואטסאפ"] },
+      en: { name: "Monthly care", tagline: "Your system keeps getting better.", time: "Monthly, cancel anytime",
+        items: ["Maintenance and fixes", "Improvements and new automations", "Direct line on WhatsApp"] },
+    },
+  ],
+  steps: {
+    he: [["שיחת אבחון", "20 דקות, בחינם. מבינים איפה הולכים לאיבוד זמן ולקוחות."], ["הצעה במחיר סגור", "מה בונים, מתי זה מוכן וכמה זה עולה — בלי הפתעות."], ["בנייה שקופה", "עדכון כל שבוע עם גרסה עובדת שאפשר לנסות."], ["עולים לאוויר", "העברה, הדרכה לצוות וליווי בשבועות הראשונים."]],
+    en: [["Discovery call", "20 minutes, free. We find where time and customers get lost."], ["Fixed-price proposal", "What we build, when it’s ready and what it costs — no surprises."], ["Transparent build", "A weekly update with a working version you can try."], ["Go live", "Handover, team training and support in the first weeks."]],
   },
 };
 
